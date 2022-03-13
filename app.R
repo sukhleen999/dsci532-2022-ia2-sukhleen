@@ -147,7 +147,9 @@ app %>% set_layout(
         dccGraph(id="timeseries_plot")
       )
     )
-  )
+  ),
+  htmlLabel('   Note: Please select both Continent and Country to view the modified plot.')
+  
 )
 
 # Run the app
