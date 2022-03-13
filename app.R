@@ -69,7 +69,7 @@ app$callback(
        input("time-series-col", "value")),
   
   function(selected_continent="Europe", selected_countries="Austria", timeseries_col = time-series-col){
-    if (!is.null(selected_countries)){
+    if ((!is.null(selected_countries)) | (!length(selected_countries) == 0)){
           plot_data <- gapminder_data %>%
             filter(continent == selected_continent & country %in% selected_countries)
      
